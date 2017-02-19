@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app='try'>
+    <head>  
+        <title>Starter pack</title>
+        <!--add css file-->
+        <!--<link rel="stylesheet" href="style.css">-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>-->
+        <script src="./js/app/app.module.js"></script>
+        <script src="./js/app/app.config.js"></script>
+        <!--<script src="app.js"></script>-->
+        <style>
+        .new-class {
+            font-size: 72px;
+        }
+        .other-class {
+            font-size: {{ font }}px;
+        }
+        .new-class2 {
+            font-size: 120px;
+        }
+        </style>
+    </head>
+    <body>
+        <h1 class="new-class" ng-class="{'other-class': name==='Justin', 'new-class2': font==120}"> Hello,
+        <span ng-if='name'>{{ name }}</span>
+        <span ng-if='!name'>World</span>
+        </h1>
+        <input type="text" ng-model='name' placeholder="name"/>
+        <input type="text" ng-model="font" placeholder="font size">
+
+    </body>
+</html>
